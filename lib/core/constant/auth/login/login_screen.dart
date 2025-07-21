@@ -172,9 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ],
                             ),
                             GestureDetector(
-                              onTap: () {
-                                print('Forgot Password? pressed');
-                              },
+                              onTap: () {},
                               child: Text(
                                 'Forgot Password ?',
                                 style: style12.copyWith(
