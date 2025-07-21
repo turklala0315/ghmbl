@@ -7,6 +7,8 @@ import 'package:ghmbl/core/constant/text_style/text_style.dart';
 import 'package:ghmbl/ui/custom_widgets/reuse_main_button/reuse_main_button.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
