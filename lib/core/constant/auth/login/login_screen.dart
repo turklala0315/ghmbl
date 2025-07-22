@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ghmbl/core/constant/auth/auth_field_decoration/auth_field_decoration.dart';
+import 'package:ghmbl/core/constant/auth/register/register_screen.dart';
 import 'package:ghmbl/core/constant/colors/colors.dart';
 import 'package:ghmbl/core/constant/string/string.dart';
 import 'package:ghmbl/core/constant/text_style/text_style.dart';
@@ -111,7 +112,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextFormField(
                           keyboardType: TextInputType.emailAddress,
                           controller: emailcontroller,
-                          decoration: authFieldDecoration,
+                          decoration: authFieldDecoration.copyWith(
+                            contentPadding: EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 15,
+                            ),
+                          ),
                         ),
                         //
                         SizedBox(height: 16),
@@ -121,11 +127,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: passwordcontroller,
                           obscureText: !_isPasswordVisible,
                           decoration: InputDecoration(
-                            hintText: '*********',
-                            prefixIcon: Icon(
-                              Icons.lock_outline,
-                              color: Colors.grey,
+                            contentPadding: EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 15,
                             ),
+                            hintText: '*********',
+
                             suffixIcon: IconButton(
                               icon: Icon(
                                 _isPasswordVisible
@@ -145,10 +152,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             filled: true,
                             fillColor: Colors.grey.shade100,
-                            contentPadding: const EdgeInsets.symmetric(
-                              vertical: 16,
-                              horizontal: 12,
-                            ),
                           ),
                         ),
 
@@ -209,7 +212,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text('Have an invite?', style: style12),
 
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterScreen(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Register',
                         style: style12.copyWith(color: forgotpasswordColor),

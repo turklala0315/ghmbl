@@ -3,6 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ghmbl/core/constant/auth/login/login_screen.dart';
+import 'package:ghmbl/core/constant/auth/register/register_screen.dart';
+
 // import 'package:ghmbl/ui/screen/zeeshan/zeshan_listtile.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
           builder: DevicePreview.appBuilder,
           theme: ThemeData.light(),
           darkTheme: ThemeData.dark(),
-          home: LoginScreen(),
+          home: RegisterScreen(),
         );
       },
     );
