@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ghmbl/core/constant/colors/colors.dart';
 import 'package:ghmbl/core/constant/text_style/text_style.dart';
 
 class ReuseMainButton extends StatelessWidget {
